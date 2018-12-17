@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!--making responsive web page-->
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4946886-2"></script>
-<title>Web Portfolio</title>
+<title>Lucky Web Portfolio</title>
+	<link rel="icon" href="www_icon.ico" type="image/icon"> 
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/alphabate.js"></script>
+
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+	<canvas id="myCanvas"></canvas>
+    <script type="text/javascript" src="js/bubble.js"></script>
+    <script>
+		var red = [0,100,63];
+		var greed = [75,100,40];
+		var blue = [197,77,55];
+		var yellow = [255,250,12];
+		
+		var color = [red,green,blue,yellow];
+		var myName = "Lucky";
+		
+		drawName(myName,color);
+		bounceBubbles();
+	
+	</script>
 </body>
 </html>
