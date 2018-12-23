@@ -1,0 +1,260 @@
+/* Neo ------------------- */
+
+.neo {
+    position: relative;
+    margin: auto;
+    width: 540px;
+    height: 540px;
+    perspective: 1000px;
+    perspective-origin: 50% 0;
+}
+
+.neo-device {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 240px;
+    height: 360px;
+    box-sizing: content-box;
+    padding: 40px 10px;
+    border-radius: 20px;
+    background: hsl(0,0%,24%);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(.84);
+    transition: transform 1s cubic-bezier(.5,.05,.09,1);
+}
+
+.neo:hover .neo-device {
+    transition-duration: .6s;
+    transform: translateX(-120px) rotateX(10deg) rotateY(40deg) rotateZ(-20deg);
+}
+
+
+.neo--has3D {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translateZ(1px); /* Needs to be > 0 to avoid flickering */
+    animation: neo-pulse 1s .2s cubic-bezier(.7,0,.3,1) alternate infinite;
+    animation-play-state: paused;
+}
+
+.neo:hover .neo--has3D {
+    animation-play-state: running;
+}
+
+.neo--has3D:nth-child(1) { 
+    animation-delay: .3s;
+}
+.neo--has3D:nth-child(2) { 
+    animation-delay: .4s;
+}
+.neo--has3D:nth-child(3) { 
+    animation-delay: .5s;
+}
+.neo--has3D:nth-child(4) { 
+    animation-delay: .6s;
+}
+
+@keyframes neo-pulse {
+  100% { transform: translateZ(80px); opacity: .8; }
+}
+
+
+
+/* Neo App ---------------- */
+
+.neo-App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: none;
+    background-color: hsl(0,0%,20%);
+    resize: none;
+}
+
+
+/* Neo Header ---------------- */
+
+.neo-Header {
+    display: flex;
+    color: hsla(0,0%,0%,.6);
+    border-bottom: 2px solid hsla(0,0%,0%,.3);
+    background-color: #2ecc71;
+}
+
+.neo-Header-title {
+    flex: 1;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: inherit;
+    font-size: 1.2em;
+    line-height: 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 1px solid hsla(0,0%,0%,.1);
+    border-right: 1px solid hsla(0,0%,0%,.1);
+    background: inherit;
+}
+
+.neo-Header-button {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: inherit;
+    border-radius: 0;
+    margin: 0;
+    background: inherit;
+}
+.neo-Header-button[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.neo-Header-button:active {
+    color: #fff;
+    background-color: hsla(0,0%,0%,.2);
+}
+
+
+/* Neo Search ---------------- */
+
+.neo-Search {
+    display: flex;
+    padding: 10px;
+    background-color: #1abc9c;
+}
+
+.neo-Search .neo-Search-input {
+    flex: 1;
+    -webkit-appearance: none; /* Removes inner shadow on iOS. */
+    display: block;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 2.5em;
+    padding: 0.5em;
+    vertical-align: middle;
+    border-radius: 3px;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    background-color: inherit;
+}
+
+.neo-Search-input:focus {
+    border-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.neo-Search-input::-webkit-input-placeholder {
+    color: hsla(0,0%,0%,.5);
+}
+
+.neo-Search-badge {
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 0 9px;
+    min-width: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    color: hsla(0,0%,0%,.5);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    background-color: inherit;
+}
+
+
+/* Neo Content ---------------- */
+
+.neo-Content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    font-size: 0;
+    background: hsl(200,30%,30%);
+}
+
+.neo-Content-img { 
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    padding: inherit;
+    background-color: hsl(200,30%,40%);
+    background-clip: content-box;
+}
+
+@-moz-document url-prefix() {
+    /* Hack since FF doesn't support flex-flow: row wrap; but already is unprefixed */
+    .neo-Content {
+        flex-direction: column;
+    }
+    .neo-Content-img {
+        flex: 1;
+    }
+}
+
+
+/* Neo TabBar ---------------- */
+
+.neo-TabBar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+}
+
+.neo-TabBar-tab {
+    flex: 1;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px;
+    height: 50px;
+    border-radius: 0;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    color: hsla(0,0%,0%,.5);
+    border: none;
+    border-left: 1px solid hsla(0,0%,0%,.1);
+    background: inherit;
+}
+
+.neo-TabBar-tab[data-icon] {
+    position: relative;
+    padding: 30px 0 0 0;
+    font-size: 10px;
+}
+
+.neo-TabBar-tab[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 50px;
+    line-height: 40px;
+
+}
+
+.neo-TabBar-tab--active,
+.neo-TabBar-tab:active {
+    color: hsla(0,0%,100%,.6);
+    background-color: #2980b9;
+}
+

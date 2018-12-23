@@ -1,5 +1,73 @@
-@charset "utf-8";
 body {
-  background-color: #EEEEEE;
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 5s ease infinite;
+	-moz-animation: Gradient 5s ease infinite;
+	animation: Gradient 5s ease infinite;
 }
 
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+h1.popup-name {
+	width: 750px;
+	font-size: 100px;
+	margin: 125px auto;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0px 1px 1px #ddd, 0px 2px 1px #d6d6d6, 
+	0 3px 1px #ccc, 0px 4px 1px #c5c5c5, 0px 5px 1px #c1c1c1, 
+	0px 6px 1px #bbb, 0px 7px 1px #777, 
+	0px 8px 3px rgba(100, 100, 100, 0.4), 
+	0px 9px 5px rgba(100, 100, 100, 0.1), 
+	0px 10px 7px rgba(100, 100, 100, 0.15), 
+	0px 11px 9px rgba(100, 100, 100, 0.2), 
+	0px 12px 11px rgba(100, 100, 100, 0.25), 
+	0px 13px 15px rgba(100, 100, 100, 0.3);
+}
+
+h1.normal-name {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-align: center;
+	position: absolute;
+	top: 45%;
+	right: 0;
+	left: 0;
+} */

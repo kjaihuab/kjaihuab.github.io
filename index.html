@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html>
-<!--<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">--> <!--making responsive web page-->
-<head>
-<title>Lucky Web Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" href="www_icon.ico" type="image/icon"> 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/alphabate.js"></script>
+<html lang="en" >
 
+<head>
+  <meta charset="UTF-8">
+  <title>Color Change Background</title>
+  <link rel="icon" href="www_icon.ico" type="image/icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/phone.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  
 </head>
+
 <body>
-	<canvas id="myCanvas"></canvas>
-    <script type="text/javascript" src="js/bubble.js"></script>
-    <script>
-		var red = [0,100,63];
-		var greed = [75,100,40];
-		var blue = [197,77,55];
-		var yellow = [255,250,12];
-		
-		var color = [red,green,blue,yellow];
-		var myName = "Lucky";
-		
-		drawName(myName,color);
-		bounceBubbles();
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
+<h1 class="popup-name">I am Lucky</h1>
 	
-	</script>
+<h1 class="normal-name">My full name is Kanyanat Jaihuab.</h1>
+
+<!-- ******phone****** -->
+	<div class="neo">
+    <div class="neo-device">
+        <div class="neo-App">
+            <header class="neo-Header neo--has3D">
+                <button class="neo-Header-button neo--has3D" data-icon="&#9776;"></button>
+                <h3 class="neo-Header-title neo--has3D">Title</h3>
+                <button class="neo-Header-button neo--has3D" data-icon="&#59157;"></button>
+            </header>
+            <div class="neo-Search neo--has3D">
+                <input class="neo-Search-input neo--has3D" type="search" placeholder="Search">
+                <output class="neo-Search-badge neo--has3D">13</output>
+            </div>
+            <div class="neo-Content neo--has3D">
+                <div class="neo-Content-img neo--has3D"></div>
+                <div class="neo-Content-img neo--has3D"></div>
+                <div class="neo-Content-img neo--has3D"></div>
+                <div class="neo-Content-img neo--has3D"></div>
+            </div>
+            <nav class="neo-TabBar neo--has3D">
+                <button class="neo-TabBar-tab neo--has3D" data-icon="&#128227;">New</button>
+                <button class="neo-TabBar-tab neo--has3D neo-TabBar-tab--active" data-icon="&#128640;">Popular</button>
+                <button class="neo-TabBar-tab neo--has3D" data-icon="&#9733;">Favs</button>
+                <button class="neo-TabBar-tab neo--has3D" data-icon="&#9206;">More</button>
+            </nav>
+        </div>
+    </div>
+	</div>
+<!-- *****/phone****** -->
+  
+
+	<script  src="js/index.js"></script>
 </body>
+
 </html>
