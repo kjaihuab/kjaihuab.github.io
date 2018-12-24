@@ -45,7 +45,7 @@ body {
 	}
 }
 
-h1.popup-name {
+#popup-name {
 	width: 750px;
 	font-size: 100px;
 	margin: 125px auto;
@@ -62,7 +62,7 @@ h1.popup-name {
 	0px 13px 15px rgba(100, 100, 100, 0.3);
 }
 
-h1.normal-name {
+#normal-name {
 	font-family: 'Open Sans';
 	font-weight: 300;
 	text-align: center;
@@ -70,4 +70,4 @@ h1.normal-name {
 	top: 45%;
 	right: 0;
 	left: 0;
-} */
+}
