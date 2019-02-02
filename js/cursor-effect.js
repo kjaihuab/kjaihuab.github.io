@@ -117,7 +117,6 @@ demo.draw = function() {
 };
 
 demo.mousemove = function() {
-	console.log("1");
 	var particle, theta, force, touch, max, i, j, n;
 
 	for ( i = 0, n = demo.touches.length; i < n; i++ ) {
